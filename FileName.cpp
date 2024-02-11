@@ -34,7 +34,8 @@ int StringToNumber(char* str) {                             //2
 			if (str[i] == j) {
 				number += r * q; q = q / 10;				
 				break;
-			}			r++;
+			}			
+			r++;
 		}
 	}
 	return number;
@@ -45,7 +46,7 @@ int main() {
 	char str2[20];
 	cin >> str1;
 	cin >> str2;
-	
+	cout << StringToNumber(str1);
 
 	return 0;
 }
