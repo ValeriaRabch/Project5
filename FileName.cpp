@@ -107,16 +107,22 @@ char* Lowercase(char* str1) {               //5
 		}
 		if (str1[index] == j) {
 			index++; i = 'A'; j = 'a';
-		}		j++;
-	}	str1[index + 1] = '\0';
-	return str1;
+		}		
+		j++;
+	}	
+	str1[index + 1] = '\0';
+	char* p = str1;
+	return p;
 }
 
 int main() {
 	char str1[20];
 	char str2[20];
 	cin >> str1;
-	cout << Lowercase(str1);
+	char * p = Lowercase(str1);
+	for (int i = 0; p[i] != '\0'; i++) {
+		cout << p[i];
+	}
 
 	return 0;
 }
