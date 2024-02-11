@@ -95,11 +95,28 @@ char* Uppercase(char* str1) {         //4
 	return str1;
 }
 
+char* Lowercase(char* str1) {               //5	
+	int index = 0; char j = 'a';
+	for (char i = 'A'; i < 'Z'; i++) {
+		if (index == strlen(str1)) {
+			break;
+		}
+		if (str1[index] == i) {
+			str1[index] = j;
+			index++; i = 'A'; j = 'a';
+		}
+		if (str1[index] == j) {
+			index++; i = 'A'; j = 'a';
+		}		j++;
+	}	str1[index + 1] = '\0';
+	return str1;
+}
+
 int main() {
 	char str1[20];
 	char str2[20];
 	cin >> str1;
-	cout << Uppercase(str1);
+	cout << Lowercase(str1);
 
 	return 0;
 }
