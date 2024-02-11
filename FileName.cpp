@@ -83,7 +83,9 @@ int main() {
 	char str2[20];
 	int number;
 	cin >> number;
+
 	char * p = NumberToString(number);
+
 	for (int i = 0; p[i] != '\0'; i++) {
 		cout << p[i];
 	}
