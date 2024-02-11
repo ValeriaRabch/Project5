@@ -132,7 +132,10 @@ int main() {
 	char str1[20];
 	char str2[20];
 	cin >> str1;
-	
+	char* p = mystrrev(str1);
+	for (int i = 0; p[i] != '\0'; i++) {
+		cout << p[i] << ' ';
+	}
 
 	return 0;
 }
