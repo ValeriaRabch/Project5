@@ -31,6 +31,7 @@ int main() {
 	char str2[20];
 	cin >> str1;
 	cin >> str2;
+	cout << mystrcmp(str1, str2);
 
 	return 0;
 }
