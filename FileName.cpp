@@ -115,14 +115,24 @@ char* Lowercase(char* str1) {               //5
 	return p;
 }
 
+char* mystrrev(char* str) {               //6
+	char n; 
+	int t = strlen(str) - 1;
+	for (int i = 0; i < strlen(str) / 2; i++) {
+		n = str[i];
+		str[i] = str[t];		
+		str[t] = n;
+		t--;
+	}
+	char* p = str;
+	return p;
+}
+
 int main() {
 	char str1[20];
 	char str2[20];
 	cin >> str1;
-	char * p = Lowercase(str1);
-	for (int i = 0; p[i] != '\0'; i++) {
-		cout << p[i];
-	}
+	
 
 	return 0;
 }
