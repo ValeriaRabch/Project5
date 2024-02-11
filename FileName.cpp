@@ -78,17 +78,28 @@ char* NumberToString(int number) {          //3
 	return p;
 }
 
+char* Uppercase(char* str1) {         //4	
+	int index = 0; char j = 'A';
+	for (char i = 'a'; i < 'z'; i++) {
+		if (index == strlen(str1)) {
+			break;
+		}
+		if (str1[index] == i) {
+			str1[index] = j;
+			index++; i = 'a'; j = 'A';
+		}
+		if (str1[index] == j) {
+			index++; i = 'a'; j = 'A';
+		}		j++;
+	}	str1[index + 1] = '\0';
+	return str1;
+}
+
 int main() {
 	char str1[20];
 	char str2[20];
-	int number;
-	cin >> number;
-
-	char * p = NumberToString(number);
-
-	for (int i = 0; p[i] != '\0'; i++) {
-		cout << p[i];
-	}
+	cin >> str1;
+	cout << Uppercase(str1);
 
 	return 0;
 }
